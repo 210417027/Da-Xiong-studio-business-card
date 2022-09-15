@@ -1,0 +1,117 @@
+* {
+  font-family: "Raleway", sans-serif, 微軟正黑體;
+  text-decoration: none;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  margin: 0;
+  background-color: #e0e0e2;
+  box-sizing: border-box; /* box-sizing => border-box屬性長寬包含了div的padding以及border */
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+p {
+  letter-spacing: 1px;
+  line-height: 22px;
+  padding: 0; /* 將文字的padding,margin改成0 */
+  margin: 0;
+  color: #666;
+  font-size: 10px;
+}
+
+.namecard {
+  width: 350px;
+  height: 200px;
+  padding: 25px;
+  margin: auto;
+  position: relative;
+  background: linear-gradient(#f2f2f2, #eee);
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  /* --------------------------------------------------- */
+  transition: all 0.5s; /* transition 教課時記得寫完動畫再加上此屬性*/
+}
+
+.namecard .name {
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: -3px;
+  color: #ff9912;
+}
+
+.namecard .position {
+  color: #36b9c1;
+}
+
+.namecard .intro {
+  padding-right: 150px;
+  /* 將intro推窄 */
+}
+
+
+
+.wave {
+  width: 700px;
+  height: 700px;
+  opacity: 0.4;
+  position: absolute;
+  left: 0;
+  background: #ff9912;
+  border-radius: 40%;
+  /* transform-origin: 50% 48%; */
+  transition: left 2s;
+  animation: drift 6000ms infinite linear;
+  margin-left: 280px;
+}
+.wave.-three {
+  animation: drift 7000ms infinite linear;
+  margin-left: 270px;
+}
+
+.wave.-two {
+  animation: drift 10000ms infinite linear;
+  background-color: yellow;
+  opacity: 0.1;
+  margin-left: 260px;
+}
+
+.wave.right {
+  margin-top: -250px;
+}
+
+@keyframes drift {
+  from {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
+}
+
+.namecard:hover {
+  transform: translate3d(-5px, -5px, 0);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+  /* 滑鼠碰觸時讓卡片向左上飄移 */
+}
+
+.namecard:hover .wave.right {
+  left: 70px;
+}
