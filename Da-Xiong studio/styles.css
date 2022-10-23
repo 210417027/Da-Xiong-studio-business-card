@@ -37,7 +37,7 @@ p {
 
 .namecard {
   width: 350px;
-  height: 200px;
+  height: 230px;
   padding: 25px;
   margin: auto;
   position: relative;
@@ -64,6 +64,10 @@ p {
 .namecard .intro {
   padding-right: 150px;
   /* 將intro推窄 */
+}
+
+.namecard .intro .lineid {
+  color:#ff9912
 }
 
 
