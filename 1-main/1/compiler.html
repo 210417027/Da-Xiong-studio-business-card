@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compiler</title>
+    <link rel="stylesheet" href="../css/compiler.css">
+</head>
+
+<body>
+    <div class="firsttitle">Use C Language to Develop Compiler</div>
+
+
+
+    <div class="bigwrapper">
+        <div class="block-center">
+            <div class="col-1 text-center-2 ">
+                Flex and Bison are used for generating lexical analyzer and syntax analyzer for Linux，it can build programs that handle structured input. They were originally used to developing compilers and modern replacements for the classic Lex and Yacc.
+                <img src="../images/compiler/process.JPG" alt="fail to show" class="img-responsive">
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="block-center">
+            <div class="col-1-1">
+                <img src="../images/compiler/sample-1-1.JPG" alt="fail to show" class="img-responsive">
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="block-center">
+            <div class="col-1-2">
+                <img src="../images/compiler/sample-1-2.JPG" alt="fail to show" class="img-responsive">
+                <div class="text-center-2 red">▲ normal situation</div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="block-center">
+            <div class="col-1-1">
+                <img src="../images/compiler/sample-2-1.JPG" alt="fail to show" class="img-responsive">
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="block-center">
+            <div class="col-1-2">
+                <img src="../images/compiler/sample-2-2.JPG" alt="fail to show" class="img-responsive">
+                <div class="text-center-2 red">▲ sysntax error</div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+
+    <div class="assembly language">
+        <div class="bigwrapper">
+            <h2 class="text-center">Ways to generate assembly language</h2>
+            <div class="text-center-2 red">
+                <h3>method one : GCC</h3>
+            </div>
+            <div class="text-center-2">
+                <h3>Compile to get the intermediate code : $ gcc –S sample3.c</h3>
+                <h3>Assemble assembly language into executable file : $ gcc sample3.s -o sample3</h3>
+            </div>
+            <br><br>
+            <div class="text-center-2 red">
+                <h3>method two : LLVM + Clang</h3>
+            </div>
+            <div class="text-center-2">
+                <h3>Add header File #include</h3>
+                <div class="block-center">
+                    <div class="col-1-2">
+                        <img src="../images/compiler/header.JPG" alt="fail to show" class="img-responsive">
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="block-center">
+                    <div class="col-1-1">
+                        <div class="red">▼ print outcome</div>
+                        <img src="../images/compiler/header-result.JPG" alt="fail to show" class="img-responsive">
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

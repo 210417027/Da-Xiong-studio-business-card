@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOLO</title>
+    <link rel="stylesheet" href="../css/yolo.css">
+</head>
+
+<body>
+    <div class="firsttitle">YOLO Facial Expression Detection System for Patients </div>
+    <div class="introduction">
+        <div class="wrapper">
+            <h2 class="text-center">Introduction</h2>
+
+            <div class="motivation text">
+                Motivation: I am very interested in machine learning. This case is a great opportunity for me to learn more about deep learning.
+            </div>
+
+            <div class="application text">
+                Application: In a short period of time, the emergency medical team must make an effective diagnosis and emergency treatment, we hope to use artificial intelligence to stabilize the patient's condition at the first moment.
+
+
+            </div>
+
+            <div class="expectation text">
+                Problem : This system must add a pain warning to make sense. If pain is detected, the system will make a sound, but to be honest I am not very good at this,so I leave it to my partner to do it.
+            </div>
+        </div>
+    </div>
+
+    <div class="precision">
+        <div class="bigwrapper">
+            <h2 class="text-center">Precision improvement</h2>
+            <div class="col-2">
+                <img src="../images/yolo/augmentation.JPG" alt="fail to show" class="img-responsive">
+            </div>
+            <div class="col-2">
+                <br><br>
+                <h1 class="subtitle">method one:<br>data augmentation</h1>
+                <p class="subsubtitle text">Rotating, reflecting, mirroring, flipping or changing the brightness and color temperature of the image can create a larger and more complete amount of data, simulate different situations, and make the application of the model more perfect.As
+                    shown on the left.</p>
+            </div>
+            <div class="clearfix"></div>
+
+            <br>
+
+            <div class="col-2">
+                <br><br>
+                <h1 class="subtitle">method two:<br>test different YOLO version and compare it<br>(YOLO4-YOLO7)</h1>
+                <p class="subsubtitle text">From YOLOv4, YOLOv5, YOLOv6, and YOLOv7, select the most accurate method among various models. After downloading the official YOLOv4, YOLOv5, YOLOv6, and YOLOv7 built-in models for testing, we found that the test result of YOLOv7 (general
+                    objects such as cats and dogs) is better. However, after we trained with custom training weights (chest pain expression), the detection results of YOLOv7 were poor, but the training results of YOLOv4 and YOLOv6 were the best, so we
+                    finally chose YOLOv4 and YOLOv6 as the basis for training.As shown on the right.
+                </p>
+            </div>
+            <div class="col-2">
+                <img src="../images/yolo/pain-comparison.JPG" alt="fail to show" class="img-responsive">
+                <img src="../images/yolo/nonpain-comparison.JPG" alt="fail to show" class="img-responsive">
+            </div>
+            <div class="clearfix"></div>
+
+            <br>
+
+
+        </div>
+    </div>
+    </div>
+
+    <div class="occasion">
+        <div class="bigwrapper">
+            <h2 class="text-center">Operating occasion</h2>
+
+            <div class="block-center">
+                <div class="col-1 text">
+                    Set up the system in the actual medical field. When the patient goes to the hospital for medical treatment, let the doctor diagnose other patients, or when there are affairs that need to be dealt with immediately, the identification system we built can
+                    be used for judgment to reduce the delay time and reduce damage.
+
+
+                    <img src="../images/yolo/occasion.JPG" alt="fail to show" class="img-responsive">
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<!--from Yolov4，Yolov5，Yolov6，and Yolov7內的各種模型中選出一個最準確的方法。-->
