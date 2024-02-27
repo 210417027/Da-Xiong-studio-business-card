@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>名片</title>
+    <style>
+      * {
+        font-family: "Raleway", sans-serif, 微軟正黑體;
+        text-decoration: none;
+      }
+      
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      
+      html {
+        width: 100%;
+        height: 100%;
+      }
+      
+      body {
+        width: 100%;
+        height: 100%;
+        padding: 40px;
+        margin: 0;
+        background-color: #ffffff;
+        box-sizing: border-box; /* box-sizing => border-box屬性長寬包含了div的padding以及border */
+        overflow-x: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      p {
+        letter-spacing: 1px;
+        line-height: 22px;
+        padding: 0; /* 將文字的padding,margin改成0 */
+        margin: 0;
+        color: #666;
+        font-size: 10px;
+      }
+      
+      .namecard {
+        width: 400px;
+        height: 250px;
+        padding: 25px;
+        margin: auto;
+        position: relative;
+        background: linear-gradient(#f2f2f2, #eee);
+        overflow: hidden;
+        border-radius: 6px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        font-weight: bold;
+        /* --------------------------------------------------- */
+        transition: all 0.5s; /* transition 教課時記得寫完動畫再加上此屬性*/
+      }
+      
+      .namecard .name {
+        font-size: 30px;
+        font-weight: bold;
+        margin-left: -3px;
+        color: #36b9c1;
+      }
+      
+      .namecard .position {
+        color: #36b9c1;
+      }
+      
+      .namecard .intro {
+        padding-right: 150px;
+        /* 將intro推窄 */
+      }
+      
+      
+      
+      .wave {
+        width: 700px;
+        height: 700px;
+        opacity: 0.4;
+        position: absolute;
+        left: 0;
+        background:#36b9c1;
+        border-radius: 40%;
+        /* transform-origin: 50% 48%; */
+        transition: left 2s;
+        animation: drift 6000ms infinite linear;
+        margin-left: 280px;
+      }
+      .wave.-three {
+        animation: drift 7000ms infinite linear;
+        margin-left: 270px;
+      }
+      
+      .wave.-two {
+        animation: drift 10000ms infinite linear;
+        background-color: yellow;
+        opacity: 0.1;
+        margin-left: 260px;
+      }
+      
+      .wave.right {
+        margin-top: -250px;
+      }
+      
+      @keyframes drift {
+        from {
+          transform: rotate(0deg);
+        }
+        from {
+          transform: rotate(360deg);
+        }
+      }
+      
+      .namecard:hover {
+        transform: translate3d(-5px, -5px, 0);
+        box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+        /* 滑鼠碰觸時讓卡片向左上飄移 */
+      }
+      
+      .namecard:hover .wave.right {
+        left: 70px;
+      }
+      
+    </style>
+    
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+
+</head>
+<body>
+  
+    <div class="namecard">
+        <div class="wave -one right"></div>
+        <div class="wave -two right"></div>
+        <div class="wave -three right"></div>
+        <div class="name">弘名鋼模</div>
+        <p>塑膠電木鋼模專業設計製造</p>
+        <p class="position">模具批發業 各式塑膠電木鋼模專業設計製造</p>
+        <div class="intro">
+          <hr />
+          <p style="font-size: 15px; color:#36b9c1">弘名鋼模成立於1999年 <br>一向秉持著品質至上 顧客第一</p>
+          <p>
+            地址:新北市三重區仁華街80巷18號<br>電話:(02)8982-7478  <br>傳真:(02)2986-4228<br> 統一編號:74943379 <br>email:sp.p030760@msa.hinet.net
+          </p>
+          
+
+        </div>
+      </div>
+    
+</body>
+</html>
